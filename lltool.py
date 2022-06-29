@@ -9,11 +9,11 @@ from pyefun.模块.终端类 import *
 __version__ = "2022.06.30"
 
 
-class Pine(rumps.App):
+class 龙龙工具(rumps.App):
 
     def __init__(self):
         icon_color = "white"
-        super(Pine, self).__init__(name="Pine",
+        super(龙龙工具, self).__init__(name="龙龙工具",
                                    icon=f"icons/{icon_color}_logo.ico")
         截图识别文字 = rumps.MenuItem("截图识别文字",
                                 icon=f"icons/{icon_color}_select.png")
@@ -43,15 +43,15 @@ class Pine(rumps.App):
             print(text)
             置剪辑板文本(text)
             删除文件(file_path)
-            提示框("Pine", "已经复制到剪切板")
+            提示框("龙龙工具", "已经复制到剪切板")
 
     @rumps.clicked("关于")
     def _关于(self, _):
         rumps.alert(
-            title="Pine",
+            title="龙龙工具",
             message=f"龙龙自用 版本号{__version__}"
         )
 
 
 if __name__ == "__main__":
-    Pine().run()
+    龙龙工具().run()
